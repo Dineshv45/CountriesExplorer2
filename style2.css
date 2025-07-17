@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{         
+    --background-color :white ;
+    --color: black;
+    --elements-color :white;
+    margin: 0;
+    font-family: Nunito, sans-serif;
+    background-color: var(--background-color);
+    color: var(--color);
+     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark{
+     --background-color :hsl(207,26%,17%) ;
+    --color: white;
+    --elements-color :hsl(209, 23%, 22%  );
+}
+
+main{
+    padding: 24px;
+}
+
+/* #title{
+    font-weight: 700;
+} */
+
+.header{
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    padding-inline: 24px;
+     background-color: var(--elements-color);
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width:1200px;
+    margin-inline: auto;
+    height:70px;
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.theme-changer{
+    cursor: pointer;
+}
+
+.back-btn{
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);  
+    cursor: pointer;
+}
+.country-details{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-top :35px; ;
+}
+.country-details img{
+    width: 40%;
+    max-width: 500px;      /* prevent it from growing too wide */
+    max-height: 300px;     /* limit tall flags like Nepal */
+    object-fit: contain;   /* scale it down while maintaining aspect ratio */
+    border: 1px solid #ddd;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    column-gap: 64px;
+    max-height:180px;
+    flex-wrap: wrap;
+}
+.country-info h1{
+    margin-bottom: 15px;
+}
+
+.country-details-container{
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 32px;
+}
+
+.border-countries{
+    margin-top: 32px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap:8px ;
+}
+.border-countries a{
+    padding: 4px 10px;
+    border-radius: 8px;
+    box-shadow:  0 0 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width:950px){
+    .country-details{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 32px;
+        gap: 32px;
+    }
+    .info{
+        max-height: unset;
+        align-items: flex-start;
+    }
+    .country-details img{
+    width: 40%;
+    max-height: 400px;
+    }
+
+}
+
