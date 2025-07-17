@@ -150,3 +150,36 @@ a{
         gap: 24px;
     }
 }
+
+
+/* Basic styles omitted for brevity */
+
+.skeleton-card {
+  width: 250px;
+  height: 350px;
+  border-radius: 8px;
+  background-color: var(--elements-color);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 16px;
+}
+
+.skeleton {
+  background: linear-gradient(
+    100deg,
+    hsl(0, 0%, 90%) 20%,
+    hsl(0, 0%, 95%) 40%,
+    hsl(0, 0%, 90%) 60%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
